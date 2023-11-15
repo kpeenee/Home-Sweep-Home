@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://4mtowjqrsmgq"]
+
+[ext_resource type="Texture2D" uid="uid://b60t5piatcnam" path="res://Assets/Chair.png" id="1_2xrax"]
+[ext_resource type="Script" path="res://Interactable.gd" id="1_dho0l"]
+[ext_resource type="PackedScene" uid="uid://ceivsi6mytp8n" path="res://ClickableComponent.tscn" id="3_161pv"]
+
+[node name="Chair" type="Sprite2D" node_paths=PackedStringArray("clickable_component")]
+texture = ExtResource("1_2xrax")
+script = ExtResource("1_dho0l")
+clickable_component = NodePath("ClickableComponent")
+name_of_interactable = "Chair"
+
+[node name="ClickableComponent" parent="." instance=ExtResource("3_161pv")]

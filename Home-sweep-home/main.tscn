@@ -1,3 +1,25 @@
-[gd_scene format=3 uid="uid://dtjpab7d6gf67"]
+[gd_scene load_steps=5 format=3 uid="uid://dtjpab7d6gf67"]
+
+[ext_resource type="Texture2D" uid="uid://ctrhaxnti8lol" path="res://Assets/Scene/Background.PNG" id="1_3ofn3"]
+[ext_resource type="Texture2D" uid="uid://0n24nii0tatm" path="res://Assets/Scene/Room.PNG" id="2_32ltl"]
+[ext_resource type="PackedScene" uid="uid://4mtowjqrsmgq" path="res://Chair.tscn" id="3_e4bss"]
+[ext_resource type="PackedScene" uid="uid://c6683j3wt1ndp" path="res://Door.tscn" id="4_kbpqx"]
 
 [node name="Main" type="Node2D"]
+
+[node name="MainRoom" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="MainRoom"]
+modulate = Color(0.0862745, 0.141176, 0.129412, 1)
+texture = ExtResource("1_3ofn3")
+
+[node name="Room" type="Sprite2D" parent="MainRoom"]
+texture = ExtResource("2_32ltl")
+
+[node name="Chair" parent="." instance=ExtResource("3_e4bss")]
+position = Vector2(195, 310)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Door" parent="." instance=ExtResource("4_kbpqx")]
+position = Vector2(-451, 103)
