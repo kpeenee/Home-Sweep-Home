@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cr1njoqcdnkav" path="res://Assets/Door.png" id="1_ooxmj"]
 [ext_resource type="PackedScene" uid="uid://ceivsi6mytp8n" path="res://ClickableComponent.tscn" id="3_ltefe"]
 
-[node name="Door" type="Sprite2D" node_paths=PackedStringArray("clickable_component")]
+[node name="Door" type="Sprite2D" node_paths=PackedStringArray("clickable_component") groups=["Interactable"]]
 texture = ExtResource("1_ooxmj")
 script = ExtResource("1_kd4y3")
 clickable_component = NodePath("ClickableComponent")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbsq1wwvhamwd"]
+
+[ext_resource type="Texture2D" uid="uid://cjpvawrfxwd3y" path="res://Assets/Window.png" id="1_3fpre"]
+[ext_resource type="Script" path="res://Interactable.gd" id="1_ofuws"]
+[ext_resource type="PackedScene" uid="uid://ceivsi6mytp8n" path="res://ClickableComponent.tscn" id="3_61c2e"]
+
+[node name="Window" type="Sprite2D" node_paths=PackedStringArray("clickable_component") groups=["Interactable"]]
+texture = ExtResource("1_3fpre")
+script = ExtResource("1_ofuws")
+clickable_component = NodePath("ClickableComponent")
+name_of_interactable = "Window"
+
+[node name="ClickableComponent" parent="." instance=ExtResource("3_61c2e")]

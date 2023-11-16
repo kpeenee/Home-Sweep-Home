@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Interactable.gd" id="1_dho0l"]
 [ext_resource type="PackedScene" uid="uid://ceivsi6mytp8n" path="res://ClickableComponent.tscn" id="3_161pv"]
 
-[node name="Chair" type="Sprite2D" node_paths=PackedStringArray("clickable_component")]
+[node name="Chair" type="Sprite2D" node_paths=PackedStringArray("clickable_component") groups=["Interactable"]]
 texture = ExtResource("1_2xrax")
 script = ExtResource("1_dho0l")
 clickable_component = NodePath("ClickableComponent")
